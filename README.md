@@ -2,21 +2,21 @@
 A Zoo Application Documentation and Initial Prototypes, to show the customer and build traction.
 
 
-DEMO::  <a href="jcsc.biz/Portals/12/Solidify/Zoo-3D.html">Zoo Prototype</a><br />
+DEMO::  <a href="http://jcsc.biz/Portals/12/Solidify/Zoo-3D.html">Zoo Prototype</a><br />
 Click:   [ Feed Me ]
 <br /><br />
 <h3>Table of Contents:</h3><hr />
 
 <ul>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/ZooStart.html">Home</a></li>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/Zoo-Index.html">Table of Content</a></li>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/AnimalManager.html">Animal Manager</a></li>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/Zoo-Build Method.svg">Build Method SVG</a></li>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/Zoo-Intro.html">Zoo Introduction</a></li>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/ZooDiagram.svg">Zoo SVG Diagram</a></li>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/Zoo.html">Zoo Prototype</a></li>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/Zoo-3D.html">Zoo 3D Prototype</a></li>
-                        <li><a href="jcsc.biz/Portals/12/Solidify/Zoo-Slides.html">Zoo Slides</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/ZooStart.html">Home</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/Zoo-Index.html">Table of Content</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/AnimalManager.html">Animal Manager</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/Zoo-Build Method.svg">Build Method SVG</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/Zoo-Intro.html">Zoo Introduction</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/ZooDiagram.svg">Zoo SVG Diagram</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/Zoo.html">Zoo Prototype</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/Zoo-3D.html">Zoo 3D Prototype</a></li>
+                        <li><a href="http://jcsc.biz/Portals/12/Solidify/Zoo-Slides.html">Zoo Slides</a></li>
                 </ul><hr />
                 
 
