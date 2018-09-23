@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animal List</title>
+  <meta name="author" content="Luke@JCSC.biz">
+
+    <!--  
+            This HTML was produced By: Luke@jcsc.biz for solidifyinc.com
+                        
+             ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ 
+            ||L |||u |||k |||e |||@ |||j |||c |||s |||c |||. |||b |||i |||z ||
+            ||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__||
+            |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
+
+     -->
+     <meta ContentSRC="https://www.solidifyinc.com">
+
+     <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      /*
+
+COLORS:
+
+http://getleaf.com/colors
+Copy + Paste from color tables.
+
+Regex: ^#([A-F 0-9 a-f]+)\.([-\w]+)
+Replace: @red-\2: #\1;
+( use correct color name )
+
+*/
+/* Red */
+/* Pink */
+/* Purple */
+/* Deep Purple */
+/* Indigo */
+/* Blue */
+/* Light Blue */
+/* Cyan */
+/* Teal */
+/* Green */
+/* Light Green */
+/* Lime */
+/* Yellow */
+/* Amber */
+/* Orange */
+/* Deep Orange */
+/* Brown */
+/* Grey */
+/* Blue Grey */
+/* American Spelling: */
+/* Gray */
+/* Blue Gray */
+/*
+	Typography: https://www.google.com/design/spec/style/typography.html
+*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+}
+@media all {
+  .material {
+    background: #eeeeee;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .material #navigation-toggle {
+    display: none;
+  }
+  .material #navigation-toggle:checked {
+    /* Menu is open */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] {
+    /*
+    Menu is open.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div {
+    transform: rotate(45deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:after {
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover {
+    /*
+    Menu is open; offer to close it.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:after {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(30deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:before {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+  .material #navigation-toggle:checked ~ .wrapper navigation {
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: rgba(33, 33, 33, 0.3) 0 3px 4px 1px;
+    bottom: 0;
+    background: #f5f5f5;
+    border-width: 0 0.75px 0.75px 0;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog:after {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .material header {
+    background: #03a9f4;
+    transition: all 200ms ease-out;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 21px;
+    color: white;
+    letter-spacing: 7.5px;
+    min-height: 1.64em;
+    line-height: 1.64em;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+  .material header h1 {
+    display: inline-block;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 21px;
+    color: white;
+    letter-spacing: 7.5px;
+    line-height: 1.64em;
+    transition: all 200ms ease-out;
+    margin: 0;
+  }
+  .material header [for=navigation-toggle] {
+    display: inline-block;
+    height: 22.5px;
+    width: 27px;
+    position: relative;
+    top: 4.5px;
+  }
+  .material header [for=navigation-toggle] div {
+    position: absolute;
+    display: inline-block;
+    width: 27px;
+    top: 7.5px;
+    left: 0;
+    height: 1.5px;
+    background: #e0e0e0;
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+  }
+  .material header [for=navigation-toggle] div:after,
+  .material header [for=navigation-toggle] div:before {
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background: #e0e0e0;
+  }
+  .material header [for=navigation-toggle] div:before {
+    bottom: auto;
+    top: 9px;
+  }
+  .material header [for=navigation-toggle]:hover {
+    /*
+    Menu is closed; Offer to open it.
+  */
+  }
+  .material header [for=navigation-toggle]:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material header [for=navigation-toggle]:hover div:after {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(30deg);
+  }
+  .material header [for=navigation-toggle]:hover div:before {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(-30deg);
+  }
+  .material .wrapper {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+  }
+  .material .wrapper navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    bottom: 100%;
+    z-index: 4;
+    transition: background 450ms ease-in, padding 450ms ease-in, border 450ms ease-in, bottom 450ms ease-out;
+    /* Calculate the width as 100% - title bar size */
+    font-size: 21px;
+    letter-spacing: 7.5px;
+    max-width: 300px;
+    width: calc(100% - 21px);
+    /* Box shadow is initially transparent */
+    box-shadow: rgba(33, 33, 33, 0) 0 3px 4px 1px;
+    /* Revert to menu typography */
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 9px;
+    color: black;
+    text-transform: uppercase;
+    /* Transparent background initially */
+    background: rgba(245, 245, 245, 0.9);
+    border: 0px solid #8f8f8f;
+  }
+  .material .wrapper navigation item {
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    display: block;
+    border-width: 0 0 1px 0;
+    padding-top: .5em;
+    line-height: 1.25em;
+    padding-bottom: .25em;
+    border-style: solid;
+    border-color: #eeeeee;
+    transition: all 200ms ease-in;
+    background: rgba(224, 224, 224, 0);
+  }
+  .material .wrapper navigation item:last-child {
+    border-width: 0 0 0 0;
+  }
+  .material .wrapper navigation item:hover {
+    background: #e0e0e0;
+  }
+  .material .wrapper blog {
+    position: relative;
+    z-index: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    padding-top: 1em;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  .material .wrapper blog entry {
+    flex-grow: 1;
+    margin: 6px;
+    min-width: 36px;
+    min-height: 36px;
+    transition: all 200ms ease-out;
+    background: #DFDFDF;
+    display: block;
+    border-radius: 1.5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 3px 4px 1px;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+  .material .wrapper blog entry[data-title] {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .material .wrapper blog:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background 150ms ease-in;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+@media all and (min-width: 480px) {
+  .material {
+    background: #eeeeee;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .material #navigation-toggle {
+    display: none;
+  }
+  .material #navigation-toggle:checked {
+    /* Menu is open */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] {
+    /*
+    Menu is open.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div {
+    transform: rotate(45deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:after {
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover {
+    /*
+    Menu is open; offer to close it.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:after {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(30deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:before {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+  .material #navigation-toggle:checked ~ .wrapper navigation {
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: rgba(33, 33, 33, 0.3) 0 3px 4px 1px;
+    bottom: 0;
+    background: #f5f5f5;
+    border-width: 0 1px 1px 0;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog:after {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .material header {
+    background: #03a9f4;
+    transition: all 200ms ease-out;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 28px;
+    color: white;
+    letter-spacing: 10px;
+    min-height: 1.64em;
+    line-height: 1.64em;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  .material header h1 {
+    display: inline-block;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 28px;
+    color: white;
+    letter-spacing: 10px;
+    line-height: 1.64em;
+    transition: all 200ms ease-out;
+    margin: 0;
+  }
+  .material header [for=navigation-toggle] {
+    display: inline-block;
+    height: 30px;
+    width: 36px;
+    position: relative;
+    top: 6px;
+  }
+  .material header [for=navigation-toggle] div {
+    position: absolute;
+    display: inline-block;
+    width: 36px;
+    top: 10px;
+    left: 0;
+    height: 2px;
+    background: #e0e0e0;
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+  }
+  .material header [for=navigation-toggle] div:after,
+  .material header [for=navigation-toggle] div:before {
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e0e0e0;
+  }
+  .material header [for=navigation-toggle] div:before {
+    bottom: auto;
+    top: 12px;
+  }
+  .material header [for=navigation-toggle]:hover {
+    /*
+    Menu is closed; Offer to open it.
+  */
+  }
+  .material header [for=navigation-toggle]:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material header [for=navigation-toggle]:hover div:after {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(30deg);
+  }
+  .material header [for=navigation-toggle]:hover div:before {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(-30deg);
+  }
+  .material .wrapper {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+  }
+  .material .wrapper navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    bottom: 100%;
+    z-index: 4;
+    transition: background 450ms ease-in, padding 450ms ease-in, border 450ms ease-in, bottom 450ms ease-out;
+    /* Calculate the width as 100% - title bar size */
+    font-size: 28px;
+    letter-spacing: 10px;
+    max-width: 400px;
+    width: calc(100% - 28px);
+    /* Box shadow is initially transparent */
+    box-shadow: rgba(33, 33, 33, 0) 0 3px 4px 1px;
+    /* Revert to menu typography */
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 12px;
+    color: black;
+    text-transform: uppercase;
+    /* Transparent background initially */
+    background: rgba(245, 245, 245, 0.9);
+    border: 0px solid #8f8f8f;
+  }
+  .material .wrapper navigation item {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    display: block;
+    border-width: 0 0 1px 0;
+    padding-top: .5em;
+    line-height: 1.25em;
+    padding-bottom: .25em;
+    border-style: solid;
+    border-color: #eeeeee;
+    transition: all 200ms ease-in;
+    background: rgba(224, 224, 224, 0);
+  }
+  .material .wrapper navigation item:last-child {
+    border-width: 0 0 0 0;
+  }
+  .material .wrapper navigation item:hover {
+    background: #e0e0e0;
+  }
+  .material .wrapper blog {
+    position: relative;
+    z-index: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    padding-top: 1em;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  .material .wrapper blog entry {
+    flex-grow: 1;
+    margin: 8px;
+    min-width: 48px;
+    min-height: 48px;
+    transition: all 200ms ease-out;
+    background: #DFDFDF;
+    display: block;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 3px 4px 1px;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  .material .wrapper blog entry[data-title] {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .material .wrapper blog:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background 150ms ease-in;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+@media all and (min-width: 720px) {
+  .material {
+    background: #eeeeee;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .material #navigation-toggle {
+    display: none;
+  }
+  .material #navigation-toggle:checked {
+    /* Menu is open */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] {
+    /*
+    Menu is open.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div {
+    transform: rotate(45deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:after {
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover {
+    /*
+    Menu is open; offer to close it.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:after {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(30deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:before {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+  .material #navigation-toggle:checked ~ .wrapper navigation {
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: rgba(33, 33, 33, 0.3) 0 3px 4px 1px;
+    bottom: 0;
+    background: #f5f5f5;
+    border-width: 0 1.5px 1.5px 0;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog:after {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .material header {
+    background: #03a9f4;
+    transition: all 200ms ease-out;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 42px;
+    color: white;
+    letter-spacing: 15px;
+    min-height: 1.64em;
+    line-height: 1.64em;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+  .material header h1 {
+    display: inline-block;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 42px;
+    color: white;
+    letter-spacing: 15px;
+    line-height: 1.64em;
+    transition: all 200ms ease-out;
+    margin: 0;
+  }
+  .material header [for=navigation-toggle] {
+    display: inline-block;
+    height: 45px;
+    width: 54px;
+    position: relative;
+    top: 9px;
+  }
+  .material header [for=navigation-toggle] div {
+    position: absolute;
+    display: inline-block;
+    width: 54px;
+    top: 15px;
+    left: 0;
+    height: 3px;
+    background: #e0e0e0;
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+  }
+  .material header [for=navigation-toggle] div:after,
+  .material header [for=navigation-toggle] div:before {
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #e0e0e0;
+  }
+  .material header [for=navigation-toggle] div:before {
+    bottom: auto;
+    top: 18px;
+  }
+  .material header [for=navigation-toggle]:hover {
+    /*
+    Menu is closed; Offer to open it.
+  */
+  }
+  .material header [for=navigation-toggle]:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material header [for=navigation-toggle]:hover div:after {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(30deg);
+  }
+  .material header [for=navigation-toggle]:hover div:before {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(-30deg);
+  }
+  .material .wrapper {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+  }
+  .material .wrapper navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    bottom: 100%;
+    z-index: 4;
+    transition: background 450ms ease-in, padding 450ms ease-in, border 450ms ease-in, bottom 450ms ease-out;
+    /* Calculate the width as 100% - title bar size */
+    font-size: 42px;
+    letter-spacing: 15px;
+    max-width: 600px;
+    width: calc(100% - 42px);
+    /* Box shadow is initially transparent */
+    box-shadow: rgba(33, 33, 33, 0) 0 3px 4px 1px;
+    /* Revert to menu typography */
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    /* Transparent background initially */
+    background: rgba(245, 245, 245, 0.9);
+    border: 0px solid #8f8f8f;
+  }
+  .material .wrapper navigation item {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    display: block;
+    border-width: 0 0 1px 0;
+    padding-top: .5em;
+    line-height: 1.25em;
+    padding-bottom: .25em;
+    border-style: solid;
+    border-color: #eeeeee;
+    transition: all 200ms ease-in;
+    background: rgba(224, 224, 224, 0);
+  }
+  .material .wrapper navigation item:last-child {
+    border-width: 0 0 0 0;
+  }
+  .material .wrapper navigation item:hover {
+    background: #e0e0e0;
+  }
+  .material .wrapper blog {
+    position: relative;
+    z-index: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    padding-top: 1em;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  .material .wrapper blog entry {
+    flex-grow: 1;
+    margin: 12px;
+    min-width: 72px;
+    min-height: 72px;
+    transition: all 200ms ease-out;
+    background: #DFDFDF;
+    display: block;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 3px 4px 1px;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+  .material .wrapper blog entry[data-title] {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .material .wrapper blog:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background 150ms ease-in;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+@media all and (min-width: 1024px) {
+  .material {
+    background: #eeeeee;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .material #navigation-toggle {
+    display: none;
+  }
+  .material #navigation-toggle:checked {
+    /* Menu is open */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] {
+    /*
+    Menu is open.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div {
+    transform: rotate(45deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:after {
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover {
+    /*
+    Menu is open; offer to close it.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:after {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(30deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:before {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+  .material #navigation-toggle:checked ~ .wrapper navigation {
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: rgba(33, 33, 33, 0.3) 0 3px 4px 1px;
+    bottom: 0;
+    background: #f5f5f5;
+    border-width: 0 2px 2px 0;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog:after {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .material header {
+    background: #03a9f4;
+    transition: all 200ms ease-out;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 56px;
+    color: white;
+    letter-spacing: 20px;
+    min-height: 1.64em;
+    line-height: 1.64em;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+  }
+  .material header h1 {
+    display: inline-block;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 56px;
+    color: white;
+    letter-spacing: 20px;
+    line-height: 1.64em;
+    transition: all 200ms ease-out;
+    margin: 0;
+  }
+  .material header [for=navigation-toggle] {
+    display: inline-block;
+    height: 60px;
+    width: 72px;
+    position: relative;
+    top: 12px;
+  }
+  .material header [for=navigation-toggle] div {
+    position: absolute;
+    display: inline-block;
+    width: 72px;
+    top: 20px;
+    left: 0;
+    height: 4px;
+    background: #e0e0e0;
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+  }
+  .material header [for=navigation-toggle] div:after,
+  .material header [for=navigation-toggle] div:before {
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e0e0e0;
+  }
+  .material header [for=navigation-toggle] div:before {
+    bottom: auto;
+    top: 24px;
+  }
+  .material header [for=navigation-toggle]:hover {
+    /*
+    Menu is closed; Offer to open it.
+  */
+  }
+  .material header [for=navigation-toggle]:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material header [for=navigation-toggle]:hover div:after {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(30deg);
+  }
+  .material header [for=navigation-toggle]:hover div:before {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(-30deg);
+  }
+  .material .wrapper {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+  }
+  .material .wrapper navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    bottom: 100%;
+    z-index: 4;
+    transition: background 450ms ease-in, padding 450ms ease-in, border 450ms ease-in, bottom 450ms ease-out;
+    /* Calculate the width as 100% - title bar size */
+    font-size: 56px;
+    letter-spacing: 20px;
+    max-width: 800px;
+    width: calc(100% - 56px);
+    /* Box shadow is initially transparent */
+    box-shadow: rgba(33, 33, 33, 0) 0 3px 4px 1px;
+    /* Revert to menu typography */
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 24px;
+    color: black;
+    text-transform: uppercase;
+    /* Transparent background initially */
+    background: rgba(245, 245, 245, 0.9);
+    border: 0px solid #8f8f8f;
+  }
+  .material .wrapper navigation item {
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    display: block;
+    border-width: 0 0 1px 0;
+    padding-top: .5em;
+    line-height: 1.25em;
+    padding-bottom: .25em;
+    border-style: solid;
+    border-color: #eeeeee;
+    transition: all 200ms ease-in;
+    background: rgba(224, 224, 224, 0);
+  }
+  .material .wrapper navigation item:last-child {
+    border-width: 0 0 0 0;
+  }
+  .material .wrapper navigation item:hover {
+    background: #e0e0e0;
+  }
+  .material .wrapper blog {
+    position: relative;
+    z-index: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    padding-top: 1em;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  .material .wrapper blog entry {
+    flex-grow: 1;
+    margin: 16px;
+    min-width: 96px;
+    min-height: 96px;
+    transition: all 200ms ease-out;
+    background: #DFDFDF;
+    display: block;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 3px 4px 1px;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+  }
+  .material .wrapper blog entry[data-title] {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .material .wrapper blog:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background 150ms ease-in;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+@media all and (min-width: 1280px) {
+  .material {
+    background: #eeeeee;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .material #navigation-toggle {
+    display: none;
+  }
+  .material #navigation-toggle:checked {
+    /* Menu is open */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] {
+    /*
+    Menu is open.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div {
+    transform: rotate(45deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:after {
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover {
+    /*
+    Menu is open; offer to close it.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:after {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(30deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:before {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+  .material #navigation-toggle:checked ~ .wrapper navigation {
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: rgba(33, 33, 33, 0.3) 0 3px 4px 1px;
+    bottom: 0;
+    background: #f5f5f5;
+    border-width: 0 3px 3px 0;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog:after {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .material header {
+    background: #03a9f4;
+    transition: all 200ms ease-out;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 84px;
+    color: white;
+    letter-spacing: 30px;
+    min-height: 1.64em;
+    line-height: 1.64em;
+    padding-left: 48px;
+    padding-right: 48px;
+    box-sizing: border-box;
+  }
+  .material header h1 {
+    display: inline-block;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 84px;
+    color: white;
+    letter-spacing: 30px;
+    line-height: 1.64em;
+    transition: all 200ms ease-out;
+    margin: 0;
+  }
+  .material header [for=navigation-toggle] {
+    display: inline-block;
+    height: 90px;
+    width: 108px;
+    position: relative;
+    top: 18px;
+  }
+  .material header [for=navigation-toggle] div {
+    position: absolute;
+    display: inline-block;
+    width: 108px;
+    top: 30px;
+    left: 0;
+    height: 6px;
+    background: #e0e0e0;
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+  }
+  .material header [for=navigation-toggle] div:after,
+  .material header [for=navigation-toggle] div:before {
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #e0e0e0;
+  }
+  .material header [for=navigation-toggle] div:before {
+    bottom: auto;
+    top: 36px;
+  }
+  .material header [for=navigation-toggle]:hover {
+    /*
+    Menu is closed; Offer to open it.
+  */
+  }
+  .material header [for=navigation-toggle]:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material header [for=navigation-toggle]:hover div:after {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(30deg);
+  }
+  .material header [for=navigation-toggle]:hover div:before {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(-30deg);
+  }
+  .material .wrapper {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+  }
+  .material .wrapper navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    bottom: 100%;
+    z-index: 4;
+    transition: background 450ms ease-in, padding 450ms ease-in, border 450ms ease-in, bottom 450ms ease-out;
+    /* Calculate the width as 100% - title bar size */
+    font-size: 84px;
+    letter-spacing: 30px;
+    max-width: 1200px;
+    width: calc(100% - 84px);
+    /* Box shadow is initially transparent */
+    box-shadow: rgba(33, 33, 33, 0) 0 3px 4px 1px;
+    /* Revert to menu typography */
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 36px;
+    color: black;
+    text-transform: uppercase;
+    /* Transparent background initially */
+    background: rgba(245, 245, 245, 0.9);
+    border: 0px solid #8f8f8f;
+  }
+  .material .wrapper navigation item {
+    padding-left: 48px;
+    padding-right: 48px;
+    box-sizing: border-box;
+    display: block;
+    border-width: 0 0 1px 0;
+    padding-top: .5em;
+    line-height: 1.25em;
+    padding-bottom: .25em;
+    border-style: solid;
+    border-color: #eeeeee;
+    transition: all 200ms ease-in;
+    background: rgba(224, 224, 224, 0);
+  }
+  .material .wrapper navigation item:last-child {
+    border-width: 0 0 0 0;
+  }
+  .material .wrapper navigation item:hover {
+    background: #e0e0e0;
+  }
+  .material .wrapper blog {
+    position: relative;
+    z-index: 0;
+    padding-left: 48px;
+    padding-right: 48px;
+    box-sizing: border-box;
+    padding-top: 1em;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  .material .wrapper blog entry {
+    flex-grow: 1;
+    margin: 24px;
+    min-width: 144px;
+    min-height: 144px;
+    transition: all 200ms ease-out;
+    background: #DFDFDF;
+    display: block;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 3px 4px 1px;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 48px;
+    padding-right: 48px;
+    box-sizing: border-box;
+  }
+  .material .wrapper blog entry[data-title] {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .material .wrapper blog:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background 150ms ease-in;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+@media all and (min-width: 1900px) {
+  .material {
+    background: #eeeeee;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .material #navigation-toggle {
+    display: none;
+  }
+  .material #navigation-toggle:checked {
+    /* Menu is open */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] {
+    /*
+    Menu is open.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div {
+    transform: rotate(45deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle'] div:after {
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover {
+    /*
+    Menu is open; offer to close it.
+  */
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:after {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(30deg);
+  }
+  .material #navigation-toggle:checked ~ header [for='navigation-toggle']:hover div:before {
+    bottom: 100%;
+    left: 0%;
+    width: 50%;
+    transform-origin: 0 50%;
+    transform: rotate(-30deg);
+  }
+  .material #navigation-toggle:checked ~ .wrapper navigation {
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: rgba(33, 33, 33, 0.3) 0 3px 4px 1px;
+    bottom: 0;
+    background: #f5f5f5;
+    border-width: 0 4px 4px 0;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+  .material #navigation-toggle:checked ~ .wrapper blog:after {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .material header {
+    background: #03a9f4;
+    transition: all 200ms ease-out;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 112px;
+    color: white;
+    letter-spacing: 40px;
+    min-height: 1.64em;
+    line-height: 1.64em;
+    padding-left: 64px;
+    padding-right: 64px;
+    box-sizing: border-box;
+  }
+  .material header h1 {
+    display: inline-block;
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 112px;
+    color: white;
+    letter-spacing: 40px;
+    line-height: 1.64em;
+    transition: all 200ms ease-out;
+    margin: 0;
+  }
+  .material header [for=navigation-toggle] {
+    display: inline-block;
+    height: 120px;
+    width: 144px;
+    position: relative;
+    top: 24px;
+  }
+  .material header [for=navigation-toggle] div {
+    position: absolute;
+    display: inline-block;
+    width: 144px;
+    top: 40px;
+    left: 0;
+    height: 8px;
+    background: #e0e0e0;
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+  }
+  .material header [for=navigation-toggle] div:after,
+  .material header [for=navigation-toggle] div:before {
+    transition: all 300ms ease-out;
+    transform: rotate(0) translateX(0) translateY(0) scaleX(1);
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: #e0e0e0;
+  }
+  .material header [for=navigation-toggle] div:before {
+    bottom: auto;
+    top: 48px;
+  }
+  .material header [for=navigation-toggle]:hover {
+    /*
+    Menu is closed; Offer to open it.
+  */
+  }
+  .material header [for=navigation-toggle]:hover div {
+    transform: rotate(90deg) scaleX(0.8);
+  }
+  .material header [for=navigation-toggle]:hover div:after {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(30deg);
+  }
+  .material header [for=navigation-toggle]:hover div:before {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform-origin: 100% 50%;
+    transform: rotate(-30deg);
+  }
+  .material .wrapper {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+  }
+  .material .wrapper navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    bottom: 100%;
+    z-index: 4;
+    transition: background 450ms ease-in, padding 450ms ease-in, border 450ms ease-in, bottom 450ms ease-out;
+    /* Calculate the width as 100% - title bar size */
+    font-size: 112px;
+    letter-spacing: 40px;
+    max-width: 1600px;
+    width: calc(100% - 112px);
+    /* Box shadow is initially transparent */
+    box-shadow: rgba(33, 33, 33, 0) 0 3px 4px 1px;
+    /* Revert to menu typography */
+    font-family: "roboto-medium", "Helvetica", sans;
+    line-height: 1.1em;
+    font-size: 48px;
+    color: black;
+    text-transform: uppercase;
+    /* Transparent background initially */
+    background: rgba(245, 245, 245, 0.9);
+    border: 0px solid #8f8f8f;
+  }
+  .material .wrapper navigation item {
+    padding-left: 64px;
+    padding-right: 64px;
+    box-sizing: border-box;
+    display: block;
+    border-width: 0 0 1px 0;
+    padding-top: .5em;
+    line-height: 1.25em;
+    padding-bottom: .25em;
+    border-style: solid;
+    border-color: #eeeeee;
+    transition: all 200ms ease-in;
+    background: rgba(224, 224, 224, 0);
+  }
+  .material .wrapper navigation item:last-child {
+    border-width: 0 0 0 0;
+  }
+  .material .wrapper navigation item:hover {
+    background: #e0e0e0;
+  }
+  .material .wrapper blog {
+    position: relative;
+    z-index: 0;
+    padding-left: 64px;
+    padding-right: 64px;
+    box-sizing: border-box;
+    padding-top: 1em;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+  .material .wrapper blog entry {
+    flex-grow: 1;
+    margin: 32px;
+    min-width: 192px;
+    min-height: 192px;
+    transition: all 200ms ease-out;
+    background: #DFDFDF;
+    display: block;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 3px 4px 1px;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 64px;
+    padding-right: 64px;
+    box-sizing: border-box;
+  }
+  .material .wrapper blog entry[data-title] {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .material .wrapper blog entry > * {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .material .wrapper blog:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background 150ms ease-in;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <container class='material'>
+  <input type='checkbox' id='navigation-toggle' />
+  <header>
+    <label for='navigation-toggle'>
+      <div>&nbsp;</div>
+    </label>
+    <h1>Zoo Prototype</h1>
+  </header>
+  <div class='wrapper'>
+    <navigation>
+      <item>Link</item>
+      <item>Link</item>
+      <item>Link</item>
+      <item>Link</item>
+      <item>Link</item>
+    </navigation>
+    <blog>
+      <entry data-title='Is the American Dream Dead?' >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+      <entry >
+        <p>Animal : _____________</p>
+        <center><a href="#You Feed Animal" onclick="alert('You Feed: ##Animal_Name');">Feed Me</a></center>
+      </entry>
+    </blog>
+  </div>
+</container>
+  
+  
+
+</body>
+
+</html>
