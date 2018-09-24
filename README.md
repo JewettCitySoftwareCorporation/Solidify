@@ -18,8 +18,8 @@ Click:   [ Feed Me ]
                         <li><a href="http://jcsc.biz/Portals/12/Solidify/Zoo-3D.html">Zoo 3D Prototype</a></li>
                         <li><a href="http://jcsc.biz/Portals/12/Solidify/Zoo-Slides.html">Zoo Slides</a></li>
                 </ul><hr />
-                
-
+     <li><a href="https://www.lucidchart.com/invitations/accept/28a4cebd-e433-42ac-984d-383c257eb12b">Edit Diagram Link - LucidCharts</a></li>           
+<hr >
 
 I appreciate your time and having me in, please let me know if I can help you grow.<br />
 ~Luke Shields
